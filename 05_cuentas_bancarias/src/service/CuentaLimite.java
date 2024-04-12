@@ -34,4 +34,15 @@ public class CuentaLimite extends Cuenta {
 			super.extraer(cantidad);
 	
 	}
+	
+
 }
+
+/*
+
+Os dejo el tostring en json: @Override
+	public String toString() {
+		return """
+				{"cantidad" : %s, "fechaHora" : "%s", "tipo" : "%s"}""".stripIndent().formatted(cantidad, fechaHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH🇲🇲ss")), tipo);
+	} 
+*/

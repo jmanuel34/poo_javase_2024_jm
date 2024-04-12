@@ -10,6 +10,7 @@ Cada movimiento se define por: cantidad, fechaHora, tipo
  */
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import model.Movimiento;
@@ -42,4 +43,10 @@ public class CuentaMovimientos extends CuentaLimite {
 	public ArrayList<Movimiento> obtenerMovimientos() {
 		return movimientos;
 	}
+/*	
+	public String toString() {
+		return """
+				{"cantidad" : %s, "fechaHora" : "%s", "tipo" : "%s"}""".stripIndent().formatted(saldo, fechaHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH🇲🇲ss")), tipo);
+	}
+*/ 
 }
