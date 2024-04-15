@@ -1,6 +1,6 @@
 package service;
 
-public class Triangulo extends Figura{
+public class Triangulo extends Figura implements Operaciones{
 	private double base, altura;
 	private double semiPerimetro;
 
@@ -22,7 +22,25 @@ public class Triangulo extends Figura{
 		return Math.sqrt(semiperimetro (s-a)(s-b)(s-c))
 		
 	}
-*/	
-	
+*/
+
+
+	@Override
+	public void girar(int grados) {
+		base+=grados;
+		altura+= grados;
+		
+	}
+
+
+	@Override
+	public int invertir() {
+		double aux;
+		aux = base;
+		altura = base;
+		base= aux;
+		return 1;
+	}
+
 
 }
