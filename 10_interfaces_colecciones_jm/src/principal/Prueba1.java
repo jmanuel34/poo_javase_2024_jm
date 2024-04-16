@@ -19,6 +19,7 @@ public class Prueba1 {
 		
 		Collection<Integer> numsCollection = new ArrayList<Integer>();
 		
+		List<Integer> num3= List.of(40,2,22,-3,6); 		//Metodo de factoria // lista inmutable (fija)
 		
 
 	}
@@ -27,7 +28,7 @@ public class Prueba1 {
 	 *  Crear un metodo que reciba una lista de Integer y devuelva
 	 *  la suma de los pares de dicha lista
 	 */
-	public static int SumarParesm(List<Integer> lista) {
+	public static int SumarPares(List<Integer> lista) {
 		int pares = 0;
 		for (Integer l:lista) {
 			if (l%2 == 0) {
