@@ -20,6 +20,7 @@ public class Prueba1 {
 		
 		Collection<Integer> numsCollection = new ArrayList<Integer>();
 		
+		List<Integer> num3= List.of(40,2,22,-3,6); 		//Metodo de factoria // lista inmutable (fija)
 		
 
 	}

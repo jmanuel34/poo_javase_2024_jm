@@ -5,23 +5,21 @@ import java.util.List;
 import java.util.Vector;
 
 public class Prueba1Am {
-	public static void main(String[] args) {
+	
+	public static void main (String ... nums2)  {
+	ArrayList<Integer> nums=new ArrayList<Integer>();
+//	nums=new ArrayList<Integer>();
+	
+	nums.add(25);
+	nums.add(200);
+	nums.add(20);
 
-		ArrayList<Integer> nums1 = new ArrayList<Integer>();
-		nums1.add(34);
-		nums1.add(25);
-		nums1.add(200);
-		nums1.add(20);
+	System.out.println(sumarPares(nums));
+	Vector<Integer> nums3 = new Vector<Integer>();
+	nums3.add(4);nums3.add(11);nums3.add(67);
+	System.out.println(sumarPares(nums3));
 
-		System.out.println(sumarPares(nums1));
-
-		Vector<Integer> nums2 = new Vector<Integer>();
-		nums2.add(4);nums2.add(11);
-		nums2.add(67); nums2.add(6);
-		
-		System.out.println(sumarPares(nums2));
 	}
-
 
 //crear un método que reciba una lista de Integer
 //y devuelva la suma de los pares de dicha lista
