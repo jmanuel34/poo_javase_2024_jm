@@ -5,14 +5,11 @@ import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
-
 public class Movimiento {
 	private double cantidad;
-	LocalDateTime fechaHora;
-	String tipo;
-	
+	private LocalDateTime fecha;
+	private String tipo;
 }

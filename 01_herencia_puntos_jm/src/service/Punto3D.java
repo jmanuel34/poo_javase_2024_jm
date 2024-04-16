@@ -16,5 +16,7 @@ public class Punto3D extends Punto{
 		this.z = z;
 	}
 	
-	
+	public void imprimir() {
+		System.out.print("Las coordenadas son: "+this.getX()+","+this.getY()+ ","+this.getZ());
+	}
 }

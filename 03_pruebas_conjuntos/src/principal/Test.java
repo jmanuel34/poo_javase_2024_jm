@@ -56,9 +56,6 @@ class Ciudad{
 		return "{\"nombre\":"+nombre+",\"poblacion\":"+poblacion+"}";
 	}
 	
-	
-	
-	
 }
 
 public class Test {

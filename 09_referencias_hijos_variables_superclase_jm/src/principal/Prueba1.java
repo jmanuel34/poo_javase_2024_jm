@@ -28,7 +28,7 @@ public class Prueba1 {
 		System.out.println(c.a);	// Imprime 3
 //		System.out.println(a);
 //		Integer entero = 100;
-//		metodoHashCode(1000);
+		metodoHashCode("e");
 		
 	}
 	static void metodoHashCode (Object o) {
