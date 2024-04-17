@@ -29,10 +29,12 @@ class SumaPares implements Condicion {
 public class AppNumeros {
 
 	public static void main(String[] args) {
+		OperacionesService service = new OperacionesService();
 		List numeros = List.of(3, -1, 5, 7, 3, -5, 8, 9, 5, 4);
 		// imprimir por un lado la suma de los pares y por otro la suma de los negativos
 		OperacionesService service = new OperacionesService();
 		System.out.println(service.sumarPorCondicion(, ));
 		System.out.println(service.sumaPositivos(numeros));
+		System.out.println("Suma positivos"+service.);
 	}
 }
