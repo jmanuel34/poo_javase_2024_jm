@@ -6,7 +6,6 @@ public class OperacionesService {
 	/* Metodo que recibe una lista de numeros enteros
 	 * y devuelve la suma de los pares
 	 */
-/*
 	public int sumaPares(List<Integer> lista) {
 		int suma=0;
 		for (Integer l:lista) {
@@ -14,11 +13,11 @@ public class OperacionesService {
 		}
 		return suma;
 	}
-//*/	
+	
 	/*
 	 * Metodo que recibe una lista de numeros enteros y devuelve la suma de los positivos
 	 */
-/*		
+		
 	public int sumaPositivos(List<Integer> numeros) {
 		int suma = 0;
 		for (Integer n:numeros) {
@@ -26,7 +25,7 @@ public class OperacionesService {
 		}
 		return suma;
 	}
-//*/	
+	
 	/*
 	 * Metodo que recibe una lista de numeros enteros y devuelve la suma de los 
 	 * multiplos de 5

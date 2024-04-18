@@ -43,7 +43,7 @@ public class ListaNumber extends ArrayList<Integer>{
 				remove(n);
 			}
 		}*/
-		/*for(int i=0;i<size();i++) {
+		/*for(int i=0;i<size();i++) {				// Falla. Empezar de final a principio
 			if(condicion.test(get(i))) {
 				remove(i);
 			}

@@ -56,7 +56,7 @@ public class ListaNumber extends ArrayList<Integer>{
 			}
 		}
 	}
-	public void tansformarNumeros(Predicate tx) {
+	public void tansformarNumeros(Transformacion tx) {
 		Iterator<Integer> it = iterator();
 		for (int i=0; i<size(); i++) {
 			set(i, tx.test(i));

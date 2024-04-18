@@ -13,28 +13,37 @@ class SumaPares implements Condicion {
 			return true;
 		return false;
 	}
+}
 
-	class SumaPositivos implements Condicion {
+class SumaPositivos implements Condicion {
 
-		@Override
-		public boolean test(Integer n) {
-			if (n >= 0)
-				return true;
-			return false;
-		}
-
+	@Override
+	public boolean test(Integer n) {
+		if (n >= 0)
+			return true;
+		return false;
 	}
+}
+
+class SumaNegativos implements Condicion {
+
+	@Override
+	public boolean test(Integer n) {
+		if(n<0) return true;
+		return false;
+	}	
 }
 
 public class AppNumeros {
 
 	public static void main(String[] args) {
-		OperacionesService service = new OperacionesService();
-		List numeros = List.of(3, -1, 5, 7, 3, -5, 8, 9, 5, 4);
+		List numeros = List.of(3, -1, 5, 7, 3, -5, 8, 9, 5, 4, -12, -1);
 		// imprimir por un lado la suma de los pares y por otro la suma de los negativos
+
 		OperacionesService service = new OperacionesService();
-		System.out.println(service.sumarPorCondicion(, ));
-		System.out.println(service.sumaPositivos(numeros));
-		System.out.println("Suma positivos"+service.);
+
+		System.out.println(service.sumarPorCondicion(numeros, new SumaPositivos()));
+		System.out.println(service.sumarPorCondicion(numeros, new SumaNegativos()));
+
 	}
 }

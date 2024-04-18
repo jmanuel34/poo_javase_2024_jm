@@ -63,7 +63,7 @@ public class ListaNumber extends ArrayList<Integer>{
 	public void transformarNumeros(Transformacion tx) {
 		for(int i=0;i<size();i++) {
 			set(i,tx.transformar(get(i)));
-		}
+		} 
 	}
 	
 }

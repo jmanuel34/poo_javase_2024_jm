@@ -31,7 +31,7 @@ public class OperacionesService {
 	//método que recibe una lista de número y una condición
 	//y devuelve la suma de los números que cumplen esa condición
 	
-	public int sumarPorCondicion(List<Integer> numeros,Condicion condicion) {
+	public int sumarPorCondicion(List<Integer> numeros, Condicion condicion) {
 		int suma=0;
 		for(Integer n:numeros) {
 			if(condicion.test(n)) {
