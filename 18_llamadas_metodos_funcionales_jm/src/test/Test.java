@@ -18,8 +18,11 @@ public class Test {
 		conjunto.add(7);conjunto.add(8);conjunto.add(9);conjunto.add(10);
 
 		service.m1(Set.of(8,4,7), s->s.length());
+		service.m1(Set.of(8,4,7), String::length);			//Sustituye la linea superior
+		
 		// Devuelve objeto y lo procesa
 		service.m2(()->"hello", a->System.out.println(a));
+		service.m2(()->"hello", System.out::println);		//Sustituye la linea superior
 		
 		service.m3((a, b)->a+b, (a,b)->a);
 		

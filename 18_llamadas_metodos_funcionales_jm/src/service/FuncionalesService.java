@@ -18,14 +18,10 @@ public class FuncionalesService {
 	public void m3(BinaryOperator<Double> db, BiFunction<Integer,String, Integer> bf) {}
 	public void m4(BiConsumer<String,Double> bc, BiPredicate<String, Long> bp) {}
 
-	
 	public void m5(IntSupplier is, List<String> lst) {}
-	
 	
 	public void m6(Map<String, Integer> mp, BiConsumer<String, Long> bc) {}
 	public void m7(Function<String, List<Integer>> f) {
 		
 	} 
-
-
 } 
