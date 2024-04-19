@@ -1,6 +1,7 @@
 package service;
 
 import model.Empleado;
+import model.Operario;
 
 public class EmpresaService {
 	
@@ -8,7 +9,7 @@ public class EmpresaService {
 		return emp.getSalario();
 	}
 	public void actualizarNivelOperario (Operario emp) {
-		emp.
+//		emp.
 	}
 
 }

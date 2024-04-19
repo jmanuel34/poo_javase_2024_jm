@@ -28,14 +28,19 @@ import lombok.NoArgsConstructor;
 */
 public class Operario extends Empleado {
 	private int nivel;
+	private int setNivel;
 	
 	public Operario() {
 		super();
+		if (nivel<=5 && nivel>=1) {
+			this.nivel = nivel;
+		}
+		else nivel = 1;
 	}
 	
 	public Operario(String nombre, int edad, LocalDate fechaIngreso, double salario,int nivel) {
 		super(nombre, edad, fechaIngreso, salario);
-		this.nivel = nivel;
+		this.setNivel=nivel;
 	}
 
 	@Override
@@ -47,8 +52,8 @@ public class Operario extends Empleado {
 	public void actualizarNivel() {
 		LocalDate hoy = LocalDate.now();
 		int antiguedad = (int) ChronoUnit.YEARS.between(hoy, super.getFechaIngreso());
-		if (antiguedad > 2 && nivel <= 5)
-			nivel++;
+		if (antiguedad >= 2 && nivel < 5)
+			this.nivel++;
 	}
 
 	public int getNivel() {
@@ -56,6 +61,9 @@ public class Operario extends Empleado {
 	}
 
 	public void setNivel(int nivel) {
-		this.nivel = nivel;
+		if (nivel<=5 && nivel>=1) {
+			this.nivel = nivel;
+		}
+		else nivel = 1;
 	}
 }

@@ -43,7 +43,7 @@ public class Director extends Empleado {
 
 	@Override
 	public void incentivar() {
-		long meses = ChronoUnit.MONTHS.between(getFechaIngreso(), LocalDate.now());
+		long meses = ChronoUnit.MONTHS.between(getFechaIngreso(), LocalDate.now().plusDays(1));
 		if (meses > 30)
 			setSalario(getSalario() + getBONO());
 		if (personal > 20)

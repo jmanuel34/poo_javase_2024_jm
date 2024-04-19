@@ -1,4 +1,4 @@
-package model;
+package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import model.Director;
+import model.Empleado;
 import service.EmpresaService;
 /*
  * private String nombre;
@@ -40,11 +42,13 @@ class TestDirector {
 	@Test
 	void test() {
 		// No cumplen condiciones
-		LocalDate fecha01 = LocalDate.of(2021, 9, 19);
+		LocalDate fecha01 = LocalDate.of(2022, 9, 19);
 		LocalDate fecha02 = LocalDate.of(2021,9, 17);
 		LocalDate fecha03 = LocalDate.of(2021,9, 16); 		//30 meses dia 18/04/2024
-		LocalDate fecha04 = LocalDate.of(2021,9, 19);
+		LocalDate fecha04 = LocalDate.of(2022,9, 19);
 		LocalDate fecha05 = LocalDate.of(2021,9, 18);
+		LocalDate fecha06 = LocalDate.now().minusMonths(31);
+		
 		
 		Director d01= new Director("Pepe",31, fecha01, 100.0,"Marketing", 18); // 0 condicion fecha
 		Director d02= new Director("Juan",32, fecha02, 100.0,"Marketing", 19); // 1 condicion fecha
