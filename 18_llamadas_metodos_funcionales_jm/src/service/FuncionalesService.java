@@ -12,10 +12,11 @@ import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 public class FuncionalesService {
+	
 	public void m1(Set<Integer> nums, Function<String, Integer> fn) {}
 	public void m2(Supplier<String> sp, Consumer<Integer> cs) {}
 	
-	public void m3(BinaryOperator<Double> db, BiFunction<Integer,String, Integer> bf) {}
+	public void m3(BinaryOperator<Double> db, BiFunction<Integer,String,Integer> bf) {}
 	public void m4(BiConsumer<String,Double> bc, BiPredicate<String, Long> bp) {}
 
 	public void m5(IntSupplier is, List<String> lst) {}

@@ -23,7 +23,7 @@ class TestCuentasService {
 		assertFalse( service.existeCuenta("ES4720800136253000145865"));
 	}
 	void testCuentasPorDivisa() {
-		assertEquals(2, service.numeroDivisas("EUR"));
+		assertEquals(2, service.contarDivisas("EUR"));
 		
 	}
 

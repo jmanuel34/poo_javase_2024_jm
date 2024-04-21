@@ -19,18 +19,24 @@ public class CuentasService {
 		            "JPY", 3258745.7),
 		   new Cuenta("8747-369", "Kenji Nakamura",
 				   LocalDate.parse("1984-06-17") , "JPY", 985471.4))); 
+	
 	// A partir de un numero de cuenta nos indica si existe o no esa cuenta
-	// A partir de un nombre de divisa nos dice cuantas cuentas hay de dicha divisa
-	// A partir de una fecha, nos indique cuentas cuentas se crearon a partir de esa fecha
 	public boolean existeCuenta(String cuenta) {
 		return cuentas.stream()
 				.anyMatch(n->n.getNumeroCuenta().equals(cuenta));
 	}
 	
-	public int numeroDivisas(String divisa) {
+	// A partir de un nombre de divisa nos dice cuantas cuentas hay de dicha divisa	
+	public int contarDivisas(String divisa) {
 		return (int)cuentas.stream()
 					.filter(n->n.getDivisa().equals(divisa))
 					.count();
 	}
 	
+	// A partir de una fecha, nos indique cuentas cuentas se crearon a partir de esa fecha
+	public int contarCuentasPorFecha(LocalDate fecha) {
+		return ((int)cuentas.stream()
+				.filter(n->n.getFechaApertura().isAfter(fecha))
+				.count());
+	}
 }
