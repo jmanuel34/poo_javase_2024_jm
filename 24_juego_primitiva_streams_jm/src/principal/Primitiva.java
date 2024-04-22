@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 /*
  * Realizar un programa que muestre la combinacion ganadora
  * de la primitiva (6 numeros aleatorios no repetidos entre 1 y 49
+ * ordenador de menor a mayor
  */
 
 public class Primitiva {
@@ -18,6 +19,7 @@ public class Primitiva {
 //				.forEach(n->System.out.println (n));
 //				.forEach((int n)->nums.add(n));
 //				.toArray();
+				.sorted()
 				.toList();
 			nums.forEach(n->System.out.println(n));
 			
