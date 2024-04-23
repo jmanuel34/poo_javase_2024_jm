@@ -46,7 +46,7 @@ public class Director extends Empleado {
 		long meses = ChronoUnit.MONTHS.between(getFechaIngreso(), LocalDate.now().plusDays(1));
 		if (meses > 30)
 			setSalario(getSalario() + getBONO());
-		if (personal > 20)
+		if (personal >= 20)
 			setSalario(getSalario() + getBONO());
 	}
 }

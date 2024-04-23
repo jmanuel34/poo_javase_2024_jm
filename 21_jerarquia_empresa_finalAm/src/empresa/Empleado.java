@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @NoArgsConstructor
-
 @SuperBuilder
 @Data
 public abstract class Empleado {
