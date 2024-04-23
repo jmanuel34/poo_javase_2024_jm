@@ -21,8 +21,6 @@ public class Operario extends Empleado {
 		
 	}
 
-	
-
 	public void setNivel(int nivel) {
 		if(nivel<=5&&nivel>=1) {
 			this.nivel = nivel;
@@ -33,9 +31,9 @@ public class Operario extends Empleado {
 
 	@Override
 	public void incentivar() {
-		if(this.getEdad()>30&&this.nivel>2) {
+		if(this.getEdad()>30 && this.nivel>2) {
 			this.setSalario(this.getSalario()+2*Empleado.BONO);
-		}else if(this.getEdad()>30||this.nivel>2) {
+		}else if(this.getEdad()>30 || this.nivel>2) {
 			this.setSalario(this.getSalario()+Empleado.BONO);
 		}
 
@@ -46,7 +44,7 @@ public class Operario extends Empleado {
 			this.nivel++;
 		}*/
 		long years=ChronoUnit.YEARS.between(getFechaIngreso(), LocalDate.now().plusDays(1));
-		if(years>=2&&this.nivel<5) {
+		if(years>=2 && this.nivel<5) {
 			this.nivel++;
 		}
 	}

@@ -2,15 +2,13 @@ package view;
 
 import java.time.LocalDate;
 
-import model.Director;
 import model.Empleado;
 import model.Operario;
-import service.EmpresaService;
 
 public class Empresa {
 
 	public static void main(String[] args) {
-		EmpresaService service = new EmpresaService();
+//		EmpresaService service = new EmpresaService();
 /*
 		LocalDate fecha01 = LocalDate.of(2021, 9, 19);
 		LocalDate fecha02 = LocalDate.of(2021,9, 17);

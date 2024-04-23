@@ -10,8 +10,7 @@ public class Operario extends Empleado {
 	
 	public Operario(String nombre, int edad, LocalDate fechaIngreso, double salario, int nivel) {
 		super(nombre, edad, fechaIngreso, salario);
-		this.setNivel(nivel);
-		
+		this.setNivel(nivel);	
 	}
 
 	public int getNivel() {
@@ -41,7 +40,7 @@ public class Operario extends Empleado {
 			this.nivel++;
 		}*/
 		long years=ChronoUnit.YEARS.between(getFechaIngreso(), LocalDate.now().plusDays(1));
-		if(years>=2&&this.nivel<5) {
+		if(years >=2 && this.nivel<5) {
 			this.nivel++;
 		}
 	}
