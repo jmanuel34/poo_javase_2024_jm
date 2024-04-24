@@ -1,8 +1,10 @@
 package service;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -90,23 +92,65 @@ public class FormacionService extends Curso {
 		 
 		//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor el nombre del curso
 		 
-		 public 
+		 public Map<Integer, String> tablaNombres() {
+//			 Map<Integer, String> tablaDiracionCursos =
+					return cursos.stream()
+					 .collect(Collectors.toMap(c->(int)Period.between(c.getFechaInicio(), getFechaFin()).toTotalMonths(), Curso::getNombre));
+		 }
 		//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor la lista de cursos con dicha duración
-		 
+		 public Map<Integer, String> tablaListaCursos() {
+			 return cursos.stream()
+					 .collect(Collectors.groupingBy(c->(int)Period.between(c.getFechaInicio(), getFechaFin()).toTotalMonths()));
+	
+		 }
 		 
 		 //tabla con los cursos divididos entre caros y baratos. Caros, los que superen el precio recibido como parámetro
 		 //baratos los que no lo superen o lo igualen
 		
-		 
+		 public Map<Boolean, List<Curso>> divisionPorprecio(double precio) {
+			 return cursos.stream()
+					 .collect(Collectors.partitioningBy(c->c.getPrecio()<precio));
+		 }
 		 //cadena con los nombres de todos los cursos, separados por una coma
-		 
+		 public String nombresCursos() {
+			 return cursos.stream()   //Stream<Curso>
+					 .map(c->c.getNombre())
+					 .collect(Collectors.joining(","));
+		 }
 		 
 		 // nota media de un curso
-		 
+		 public double mediaCurso(String curso) {
+/*			 return cursos.stream()		//Stream<Curso>
+					 .filter(c->c.getNombre().equals(curso))	//Stream<Curso>
+					 .findFirst()								//Optional<Curso>
+					 .orElse(null)								//Curso
+					 .getAlumnos()
+					 .stream()
+					 .collect(Collectors.averagingDouble(a->a.getNota()));   	//double  //*/
+			 return cursos.stream()		//Stream<Curso>
+					 .filter(c->c.getNombre().equals(curso))	//Stream<Curso>
+					 .flatMap(c->c.getAlumnos().stream())	//Stream<Alumno>
+					/* .map(c->c.getAlumnos())   //Stream<List<Alumno>>
+					 .map(l->l.stream())   //Stream<Alumno>  */
+					 .collect(Collectors.averagingDouble(a->a.getNota()));
+		 }
 		 //lista con los nombres de todos los alumnos
 		 
+		 public List<Alumno> listaAlumnos() {
+/*			 
+		 	return cursos.stream()	         //Stream<Curso>	
+		 			.flatMap(c->c.getAlumnos().stream())   //Stream<Alumno>
+		 			.map(a->a.getNombre())   //Stream<String>
+		 			.toList();
+//*/		return cursos.stream()
+					.flatMap(c->c.getAlumnos().stream())
+					.map(a->a.getNombre())
+					.toList();
+		 }
 		 //lista de alumnos matriculados en cursos de determinada temática
 		 
 		 //alumno con mayor nota
+		 
+		 
 
 }
