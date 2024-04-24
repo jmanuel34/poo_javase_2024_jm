@@ -1,10 +1,10 @@
 package testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Date;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -31,10 +31,11 @@ class TestPedidosService {
 		assertEquals("patatas fritas", service.pedidoProximoFecha(LocalDate.of(2022, 8, 7)).getProducto());
 	}
 
-//	@Test
-//	void testPedidoMasReciente() {
-//		assertEquals("coca cola", service.pedidoMasReciente().getProducto());
-//	}
+	@Test
+	void testPedidoMasReciente() {
+		assertTrue(service.pedidoMasReciente().isPresent());
+		assertEquals("coca cola", service.pedidoMasReciente().get().getProducto());
+	}
 
 	@Test
 	void testPedidosEntreFechas() {
